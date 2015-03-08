@@ -1,10 +1,19 @@
-from IPython import embed
-
 def merge(left, right):
   result = []
   while (len(left) > 0) and (len(right) > 0):
-    if left[0] <= right[0]
-    embed()
+    if (left[0] >= right[0]):
+      result.append(right[0])
+      right = right[1:]
+    else:
+      result.append(left[0])
+      left = left[1:]
+  while (len(left) > 0):
+    result.append(left[0])
+    left = left[1:]
+  while (len(right) > 0):
+    result.append(right[0])
+    right = right[1:]
+  return result
 
 def merge_sort(items):
   if (len(items) == 1):
@@ -17,4 +26,4 @@ def merge_sort(items):
 
 input = [5, 6, 7, 3, 4, 3, 2, 8, 10, 12]
 
-merge_sort(input)
+print merge_sort(input)
