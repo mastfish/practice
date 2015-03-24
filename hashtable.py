@@ -1,32 +1,13 @@
-class Hash:
+hash = [None,None,None ] 
 
-  def __init__(self):
-    self.array = [None] * 50
-    
-  def insert(self, key, value):
-    self.array[key:(key+2)] = value
+hash[2] = 'gsakjf'
 
-  def find(self, key):
-    self.array[key]
-
-  def delete(self, key):
-    self.array[key] = None
-
-hash = Hash()
-print len(hash.array)
-
-hash.insert(5, 'g')
-
-print hash.find(5)
-
-hash.delete(5)
-
-print hash.find(5)
+print hash[2]
 
 print hash
 
-print hash.array[5]
+hash[2] = None
 
-print hash.array
+print hash[2]
 
-print len(hash.array)
+print hash
